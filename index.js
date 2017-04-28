@@ -1,6 +1,12 @@
-var http = require('http');
-var server = http.createServer(function(req,res){
-	res.end('OK');
+var express = require('express');
+var app = express();
+
+app.get('/',function(req,res){
+	res.send('This is Spalta !!!');
 });
 
-server.listen(9999);
+app.get('/about',function(req,res){
+	res.send('Bite the dust');
+});
+
+app.listen(9999);
